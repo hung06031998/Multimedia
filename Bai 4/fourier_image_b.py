@@ -12,6 +12,6 @@ f_ishift = np.fft.ifftshift(img)
 img_back = np.fft.ifft2(f_ishift)
 img_back = np.abs(img_back)
 
-misc.imsave('outfile_back.jpg', img_back)
+misc.imsave('outfile_back_2.jpg', img_back)
 plt.title('Reconstructed image'),plt.xticks([]), plt.yticks([])
 plt.show()
