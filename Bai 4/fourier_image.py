@@ -2,7 +2,13 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 import scipy.misc as misc
-img = cv2.imread('test.png',0)
+
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('-i', '--image',
+    help="get image path")
+args = parser.parse_args()
+img = cv2.imread(args.image, 0)
 f = np.fft.fft2(img)
 fshift = np.fft.fftshift(f)
 magnitude_spectrum = 20*np.log(np.abs(fshift))
