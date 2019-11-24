@@ -1,1 +1,1 @@
-hu?ng d?n ch?y
+run cmd: python ex3.py
