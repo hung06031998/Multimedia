@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np
 
 img = Image.open('rgba.png')
+print img.mode
 
 rgba2grey = img.convert('LA')
 rgba2grey.save('rgba2grey.png')
@@ -23,15 +24,19 @@ img_b = img.copy()
 img_b.putdata(b)
 img_b.save('rgba2blue.png')
 
-if img.mode == 'RGB':
-	img = img.convert('RGBA')
-
-img.putalpha(128)
-img.save('rgba2alpha.png')
+if img.mode == 'RGBA':
+	img_a = img.copy()
+	img_a.putalpha(128)
+	img_a.save('rgba2alpha.png')
 
 R = Image.open('rgba2red.png').split()[0]
 G = Image.open('rgba2green.png').split()[1]
 B = Image.open('rgba2blue.png').split()[2]
-A = Image.open('rgba2alpha.png').split()[3]
-RGBA = Image.merge("RGBA",(R,G,B,A))
-RGBA.save('rgba_merged.png')
+
+if img.mode == 'RGB':
+	RGB = Image.merge("RGB",(R,G,B))
+	RGB.save('rgba_merged.png')
+else:
+	A = Image.open('rgba2alpha.png').split()[3]
+	RGBA = Image.merge("RGBA",(R,G,B,A))
+	RGBA.save('rgba_merged.png')
