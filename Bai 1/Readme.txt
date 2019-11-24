@@ -1,4 +1,5 @@
 b1-a-vẽ trong 10 chu kỳ
+// python b1-a.py
 các biến:
 f : tần sô hàm sin
 fs: tần số lấy mẫu
@@ -9,6 +10,7 @@ T:chu kì
 a = số mẫu cần lấy tính theo fs (đây là tham số cho hàm linspace)
 
 b1-b-vẽ trong 1 chu kì
+//python b1-b.py
 f : tần sô hàm sin
 fs: tần số lấy mẫu
 A:biên độ cơ bản của hàm sin
@@ -19,4 +21,4 @@ T:chu kì
 a = số mẫu cần lấy tính theo fs (đây là tham số cho hàm linspace)
 
 
-//chạy bằng spyder
+//chạy bằng spyder hoặc dòng lệnh
