@@ -1,5 +1,5 @@
 # Giải bài tập số 5: Vẽ các ảnh
-- Source code: ***bai5.py***
+- Source code: **bai5.py**
 - Thư viện yêu cầu: numpy, matplotlib
 - Các tham số: 
   + l: độ mịn
