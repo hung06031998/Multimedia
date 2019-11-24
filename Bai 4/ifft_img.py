@@ -12,6 +12,7 @@ def scale(X, lowest, highest):
     denorm_fourier[denorm_fourier==0] = 1
     return lowest + norm_fourier/denorm_fourier
 
+print("Recovering image")
 recoverImage = plt.imread('real_img.png').astype('complex128')
 recoverImage.imag = plt.imread('imaginary_img.png')
 recoverImage = ifft2(recoverImage).real
@@ -23,3 +24,4 @@ for x in range(4):
 
 recoverImage = recoverImage.astype('uint8')
 misc.imsave('recover.png', recoverImage)
+print("Recovered image and saved to 'rercover.png'")

@@ -25,7 +25,7 @@ for x in range(4):
 
 realImg = realImg.astype('uint8')
 misc.imsave('real_img.png', realImg)
-
+print("Created Real Fourier image: 'real_img.png'")
 # Get Imaginary Fourier image and export to 'imaginary_img.png'
 imaginaryImg = fftImg.imag
 for x in range(4):
@@ -37,3 +37,4 @@ for x in range(4):
 imaginaryImg = imaginaryImg.astype('uint8')
 
 misc.imsave('imaginary_img.png', imaginaryImg)
+print("Created Imaginary Fourier image: 'imaginary_img.png'")
