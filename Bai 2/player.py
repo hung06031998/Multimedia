@@ -7,7 +7,7 @@ files = [f for f in listdir(".") if isfile(f)]
 file_name = input("Filename: ")
 if file_name in files:
 	if '.wav' in file_name :
-		wave_obj = sa.WaveObject.from_wave_file("A4.wav")
+		wave_obj = sa.WaveObject.from_wave_file(file_name)
 
 		while True :
 			play_obj = wave_obj.play()
