@@ -22,7 +22,7 @@ plt.xlabel('t')
 plt.ylabel('s(t)')
 plt.title('bieu dien S(t)')
 plt.show
-plt.savefig('books_read.png')
+plt.savefig('b1-a.png')
 
 
 
