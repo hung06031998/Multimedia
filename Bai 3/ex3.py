@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 
-img = Image.open('')
+img = Image.open('img.png')
 print "Image Mode: " + img.mode
 
 rgba2grey = img.convert('LA')
