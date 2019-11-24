@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 
 img = Image.open('img.png')
-print img.mode
+print "Image mode:"+ img.mode
 
 rgba2grey = img.convert('LA')
 rgba2grey.save('greyscale.png')
