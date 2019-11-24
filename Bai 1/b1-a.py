@@ -11,9 +11,9 @@ import matplotlib.pyplot as plt
 f = 50
 fs = 1000
 A = 1
-N = 10
-T = 1/f
-a=(N*(1/f))/(1/fs)
+N = 1
+T = 1.0/float(f)
+a=(N*T)/(1.0/float(fs))
 c=int(a)
 t = np.linspace(0,N*T,c)
 s = A*np.sin(2*np.pi*f*t)

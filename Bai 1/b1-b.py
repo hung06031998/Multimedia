@@ -7,17 +7,21 @@ Created on Sat Nov 23 00:29:50 2019
 
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 
 f = 50
-fs = 10000
+fs = 1000
 A = 1
 N = 1
 n = 2
-T = 1/f
-c=(N*T)/(1/fs)
-t = np.linspace(0,N*T,c)
-for i in range(0,2*n+2):
-    s =+ (A/((2*i+1)*(2*i+1)))*np.sin(2*np.pi*(2*i+1)*f*t)
+T = 1.0/float(f)
+c=(N*T)/(1.0/float(fs))
+a=int(c)
+print(a)
+t = np.linspace(0,N*T,a)
+s=np.zeros(len(t))
+for i in range(2*n+2):
+    s += ((float(A)/(2*i+1)**2)*np.sin(2*math.pi*(2*i+1)*f*t))
 #ket thuc vong lap
 plt.plot(t,s)
 plt.xlabel('t')
