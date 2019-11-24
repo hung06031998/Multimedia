@@ -1,1 +1,1 @@
-run cmd: python exe.py
+run cmd: python ex3.py
